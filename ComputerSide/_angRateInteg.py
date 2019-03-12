@@ -7,7 +7,7 @@ import Quaternions as qt
 import PygameRendering as PR
 
 
-class GYR_Integration(object):
+class GYR_Integration:
     def __init__(self, ReadFromArduino_instance, dt, offset_GYRO, verbose=0):
 
         self.dt = dt
@@ -34,7 +34,7 @@ class GYR_Integration(object):
         for integration of sensor motion. The integration input is the
         gyroscope signal"""
         qDelta = qt.angular_rate_to_quaternion_rotation(self.wm, self.dt)
-        self.o = qt.quaternion_product(self.o, qDelta)
+        self.o = qt.quaternion_product(self.o, qDelta)  #* ***
 
         if self.verbose > 2:
             print("PRINT NEW STATE ###")

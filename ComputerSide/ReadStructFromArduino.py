@@ -32,7 +32,7 @@ def print_values(values):
     print(values[6:9])
 
 
-class ReadFromArduino(object):
+class ReadFromArduino:
     """A class to read the serial messages from Arduino. 
     The code running on Arduino can for example 
     be the ArduinoSide_LSM9DS0 sketch."""

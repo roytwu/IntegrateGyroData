@@ -1,10 +1,9 @@
 """A file implementing the quaternion class"""
-
 import sympy as sp
 import math
 
 """ A class for describing a quaternion """
-class Quaternion(object):
+class Quaternion:
     def __init__(self, q0=0, q1=0, q2=0, q3=0):
         self.q0 = q0
         self.q1 = q1
@@ -12,7 +11,7 @@ class Quaternion(object):
         self.q3 = q3
 
 """ A class for describing a vector """
-class Vector(object):
+class Vector:
     def __init__(self, vx=0, vy=0, vz=0):
         self.vx = vx
         self.vy = vy
