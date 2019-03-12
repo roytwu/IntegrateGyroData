@@ -6,9 +6,7 @@ import numpy as np
 
 
 def look_for_available_ports():
-    '''
-    find available serial ports to Arduino
-    '''
+    '''find available serial ports to Arduino'''
     available_ports = glob.glob('/dev/ttyACM*')
     print("Available porst: ")
     print(available_ports)
@@ -35,8 +33,9 @@ def print_values(values):
 
 
 class ReadFromArduino(object):
-    """A class to read the serial messages from Arduino. The code running on Arduino
-    can for example be the ArduinoSide_LSM9DS0 sketch."""
+    """A class to read the serial messages from Arduino. 
+    The code running on Arduino can for example 
+    be the ArduinoSide_LSM9DS0 sketch."""
 
     def __init__(self, port, SIZE_STRUCT=36, verbose=0):
         self.port = port
@@ -50,8 +49,8 @@ class ReadFromArduino(object):
         self.port.flushInput()
 
     def read_one_value(self):
-        """Wait for next serial message from the Arduino, and read the whole
-        message as a structure."""
+        """Wait for next serial message from the Arduino, 
+        and read the whole message as a structure."""
         read = False
 
         while not read:
